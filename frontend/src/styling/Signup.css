@@ -1,0 +1,263 @@
+/* signup Container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.signup-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.login-box {
+  background: rgb(142, 31, 31);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Heading */
+.signup-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Form */
+.signup-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input Fields */
+.signup-box input {
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  color: #333;
+}
+
+.signup-box input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: white;
+  color: #333;
+}
+
+.signup-box input::placeholder {
+  color: #999;
+}
+
+/* Button */
+.signup-box button {
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.signup-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.signup-box button:active {
+  transform: translateY(0);
+}
+.login-box button {
+  padding: 14px;
+  background: linear-gradient(135deg, #030c33 0%, #17022c 100%);
+  color: rgb(255, 0, 0);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.login-box button:active {
+  transform: translateY(0);
+}
+
+/* Message */
+.signup-box p {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Terms and Conditions Text */
+.terms-text {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  margin: 5px 0 0 0 !important;
+  line-height: 1.4;
+}
+
+/* Login Link Section */
+.login-link-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.login-prompt {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 15px 0 !important;
+}
+
+.login-redirect-button {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-redirect-button:hover {
+  /* background: #0029cc; */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.login-redirect-button:active {
+  transform: translateY(0);
+}
+
+/* OTP Info Message */
+.otp-info {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 20px 0 !important;
+  line-height: 1.5;
+}
+
+.otp-info strong {
+  color: #667eea;
+}
+
+/* Back Button */
+.back-button {
+  background: white !important;
+  color: #667eea !important;
+  border: 2px solid #667eea !important;
+  margin-top: 10px !important;
+}
+
+.back-button:hover {
+  background: #f5f7ff !important;
+}
+
+/* Success and Error Messages */
+.success-message {
+  margin-top: 15px !important;
+  padding: 12px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 8px;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+}
+
+.error-message {
+  margin-top: 15px !important;
+  padding: 12px;
+  background: #f8d7da;
+  color: #721c24;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
+  text-align: center;
+}
+
+/* Disabled State */
+.signup-box button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signup-box input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* Error/Success message colors */
+.signup-box p.error {
+  color: #e74c3c;
+}
+
+.signup-box p.success {
+  color: #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .signup-box {
+    padding: 30px 20px;
+  }
+  
+  .signup-box h2 {
+    font-size: 24px;
+  }
+}

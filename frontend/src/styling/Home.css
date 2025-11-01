@@ -1,0 +1,396 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
+}
+
+/* Home Container */
+.home-container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.home-content {
+  background: white;
+  padding: 50px 60px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 1000px;
+  max-width: 1200px;
+  margin: 20px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  position: relative;
+  color: #333; /* default text color for readability */
+}
+
+/* Header */
+.home-content header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.home-content header h1 {
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-content header p {
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Sections */
+.home-content section {
+  margin-bottom: 40px;
+}
+
+.home-content section h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #667eea;
+  display: inline-block;
+}
+
+/* Form Styling */
+.home-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-content label {
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 8px;
+}
+
+.home-content input[type="text"],
+.home-content input[type="file"],
+.home-content textarea {
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  background: white;
+  color: #333;
+}
+
+.home-content input[type="file"] {
+  text-align: center;
+  padding: 12px 10px;
+  cursor: pointer;
+}
+
+.home-content input[type="file"]::file-selector-button {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.home-content input[type="file"]::file-selector-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.4);
+}
+
+.home-content input[type="text"]:focus,
+.home-content textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  background: white;
+  color: #333;
+}
+
+.home-content input[type="text"]::placeholder,
+.home-content textarea::placeholder {
+  color: #999;
+}
+
+.home-content textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* small hint under context */
+.context-hint {
+  font-size: 12px;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Buttons */
+.home-content button {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.home-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.home-content button:active {
+  transform: translateY(0);
+}
+
+/* Account Actions Section */
+.account-actions {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.account-actions button {
+  flex: 0 0 auto;
+  min-width: 120px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* Logout Button */
+.account-actions .logout-button {
+  background: white;
+  color: #333;
+  border: 2px solid #667eea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-actions .logout-button:hover {
+  background: #f8f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Delete Button */
+.delete-button {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%) !important;
+}
+
+.delete-button:hover {
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4) !important;
+}
+
+/* Upload message and file preview styling */
+.upload-message {
+  margin-top: 20px;
+  background: #f9fafb;
+  border: 1px solid #eef2f7;
+  padding: 16px;
+  border-radius: 8px;
+  color: #333; /* ensure text is visible */
+}
+
+.file-preview {
+  margin-top: 12px;
+  color: #333; /* ensure summary text visible */
+}
+
+.file-preview summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  outline: none;
+  color: #333;
+}
+
+.file-preview pre {
+  margin: 0;
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: 1px solid #eee;
+  color: #333;
+  text-align: left; /* ✅ Add this line */
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Modal Box */
+.modal-box {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  min-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: modalSlideIn 0.3s ease-out;
+  position: relative;
+  z-index: 1001;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-box h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.modal-box p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.modal-buttons button {
+  flex: 1;
+  max-width: 150px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.confirm-delete-btn {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+}
+
+.confirm-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.cancel-btn {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-content {
+    padding: 40px 30px;
+    max-width: 100%;
+  }
+  
+  .home-content header h1 {
+    font-size: 28px;
+  }
+  
+  .home-content header p {
+    font-size: 16px;
+  }
+  
+  .home-content section h2 {
+    font-size: 20px;
+  }
+  
+  .account-actions {
+    flex-direction: column;
+  }
+  
+  .account-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content {
+    padding: 30px 20px;
+  }
+  
+  .home-content header h1 {
+    font-size: 24px;
+  }
+}
+
+/* ---------- End of Home.css ---------- */
